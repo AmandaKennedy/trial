@@ -1,0 +1,582 @@
+/*media query code from W3Schools. Also got a little help from Mary Beth: https://www.w3schools.com/css/tryit.asp?filename=tryresponsive_breakpoints */
+
+/* For desktop: */
+/* For desktop: */
+@media (min-width: 769px) {
+    .flex-items{
+        width: 30%;
+        
+    }
+    #about {
+        width: 60%;
+    }
+
+    #hero-text {
+        font-size: 40px;
+        padding-left: 40px;
+    }
+    #hero-icon {
+        padding: 20px;
+        width: calc(50vw - 84px);
+    }
+    #rcorners1 {
+        height: 40vh;
+
+    }
+    
+}
+
+
+@media (max-width: 768px) {
+    /* For mobile phones: */
+    /*[class*="col-"] {
+        width: 100%;
+    }*/
+    
+    .flex-items{
+        width: calc(100% - 20px);
+    }
+    
+    #hero-text {
+        font-size: 20px;
+        padding-left: 10px;
+    }
+    
+    #hero-icon {
+        padding: 5px;
+        width: calc(50% - 24px);
+    }
+    
+    #rcorners1 {
+        height: 70vh;
+    }
+    
+}
+
+/* Hamburger menu from https://codepen.io/erikterwan/pen/grOZxx
+/*
+ * Made by Erik Terwan
+ * 24th of November 2015
+ * MIT license
+ */
+
+#menutoggle body
+{
+  margin: 0;
+  padding: 0;
+  
+  background: #232323;
+  color: #cdcdcd;
+  font-family: "Proxima Nova Bold", sans-serif;
+  
+  overflow-x: hidden;
+}
+
+#menutoggle a
+{
+  text-decoration: none;
+  color: #232323;
+  font: 'Proxima Nova Bold', sans-serif;
+  
+  transition: color 0.3s ease;
+}
+
+#menutoggle a:hover
+{
+  color: lightgrey;
+}
+
+#menuToggle
+{
+  display: block;
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  
+  z-index: 1;
+  
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+#menuToggle input
+{
+  display: block;
+  width: 40px;
+  height: 32px;
+  position: absolute;
+  top: -7px;
+  left: -5px;
+  
+  cursor: pointer;
+  
+  opacity: 0; /* hide this */
+  z-index: 2; /* and place it over the hamburger */
+  
+  -webkit-touch-callout: none;
+}
+
+#menuToggle span
+{
+  display: block;
+  width: 33px;
+  height: 4px;
+  margin-bottom: 5px;
+  position: relative;
+  
+  background: #cdcdcd;
+  border-radius: 3px;
+  
+  z-index: 1;
+  
+  transform-origin: 4px 0px;
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              background 0.5s cubic-bezier(0.77,0.2,0.05,1.0),
+              opacity 0.55s ease;
+}
+
+#menuToggle span:first-child
+{
+  transform-origin: 0% 0%;
+}
+
+#menuToggle span:nth-last-child(2)
+{
+  transform-origin: 0% 100%;
+}
+
+/* 
+ * Transform all the slices of hamburger
+ * into a crossmark.
+ */
+#menuToggle input:checked ~ span
+{
+  opacity: 1;
+  transform: rotate(45deg) translate(-2px, -1px);
+  background: #232323;
+}
+
+/*
+ * But let's hide the middle one.
+ */
+#menuToggle input:checked ~ span:nth-last-child(3)
+{
+  opacity: 0;
+  transform: rotate(0deg) scale(0.2, 0.2);
+}
+
+/*
+ * Ohyeah and the last one should go the other direction
+ */
+#menuToggle input:checked ~ span:nth-last-child(2)
+{
+  opacity: 1;
+  transform: rotate(-45deg) translate(0, -1px);
+}
+
+/*
+ * Make this absolute positioned
+ * at the top left of the screen
+ */
+#menu
+{
+  position: absolute;
+  width: 300px;
+  margin: -100px 0 0 0;
+  padding: 50px;
+  padding-top: 125px;
+  right: -100px;
+  
+  background: #ededed;
+  list-style-type: none;
+  -webkit-font-smoothing: antialiased;
+  /* to stop flickering of text in safari */
+  
+  transform-origin: 0% 0%;
+  transform: translate(100%, 0);
+  
+  transition: transform 0.5s cubic-bezier(0.77,0.2,0.05,1.0);
+}
+
+#menu li
+{
+  padding: 10px 0;
+  font-size: 22px;
+}
+
+/*
+ * And let's fade it in from the left
+ */
+#menuToggle input:checked ~ ul
+{
+  transform: scale(1.0, 1.0);
+  opacity: 1;
+}
+
+/* end of codepen code */
+
+
+header {
+     padding: 20px;
+}
+ header h3 {
+     display: inline-block;
+     margin: 0px;
+     float: right;
+     line-height: 55pt;
+     word-spacing: 30px;
+     color: #8789C0;
+}
+ header h1 {
+     margin: 0px;
+     display: inline-block;
+     line-height: 40pt;
+     color: #8789C0;
+}
+
+
+ h1 {
+     color: #8789C0;
+     font-size: 35pt;
+     font-family: 'Proxima Nova Bold', sans-serif;
+     text-decoration: none;
+}
+ h3 {
+     color: #8789C0;
+     font-size: 15pt;
+     font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+ a {
+     color: #8789C0;
+     font-family: 'Proxima Nova Bold', sans-serif;
+     list-style: none;
+     text-decoration: none;
+     padding: 10px;
+}
+
+body {
+    margin: 0px;
+}
+
+/* I modified the following code for my hero from W3schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_hero_image */
+ #hero{
+    display: inline-block;
+    background-size: cover;
+    background-color: #5941A9;
+    height: 80vh;
+    width: 100vw;
+}
+ #hero-text{
+     font-family: 'Proxima Nova Bold', sans-serif;
+     color: white;
+     text-align: left;
+     width: 50vw;
+     height: 100%;
+     display: inline-block;
+     /*padding-top: calc(75vh - 30pt);*/
+     padding-top: 350px;
+}
+
+#hero-text a
+{
+  color: white;
+}
+
+ #hero-icon{
+     height: 100%;
+     display: inline-block;
+     vertical-align: top;
+     overflow: hidden;
+     text-align: center;
+}
+#hero-icon img {
+        width:100%;
+        height: 100%;
+}
+
+
+body h3 {
+     color: #5941A9;
+     font-size: 20pt;
+     font-family: 'Proxima Nova Bold', sans-serif;
+     padding-left: 40px;
+     padding-right: 40px;
+     /*text-decoration: underline #426AC7;*/
+}
+
+.underline {
+    border-bottom: 5px solid #5941A9; 
+}
+
+ p{
+     padding-left:40px;
+     padding-right:40px;
+     font-size: 15pt;
+     font-family: 'Proxima Nova Bold', sans-serif;
+     
+}
+
+li{
+     font-size: 15pt;
+     font-family: 'Proxima Nova Bold', sans-serif;
+     padding-left: 50px;
+     padding-right: 50px;
+    
+}
+
+caption {
+    font-size: 10pt;
+    font-family: 'Proxima Nova Bold', sans-serif;  
+}
+
+/* homepage icon borders—code modified from W3Wchools:*/ 
+
+#rcorners1 {
+    border-radius: 25px;
+    border: 2px solid lightgrey;
+    padding: 20px;
+    width: calc(100% - 44px);
+            
+}
+
+/* image animations modified from this code: http://dabblet.com/gist/1991345 */
+
+/* Pinpoint Image + Animation: Icon From The Noun Project: https://thenounproject.com/icon/1609848/ */
+
+.pinpoint {
+	width: 400px;
+	height: 300px;
+	background-image: url("../images/CCD_discover.svg");
+	background-repeat: no-repeat;
+    background-size: cover;
+	transition: background-image 1s;
+    
+}
+
+/* one id for each of the six pics; 
+move backgorund imag into id (specific stuff) and general stuff in a class, everything in round courners can be moved into a class (image container) */
+
+
+
+.pinpoint:hover {
+	background-image: url("../images/CCD_discover_animate.svg");
+}
+
+/* Learn Image and Animation: Icone From The Noun Project: https://thenounproject.com/icon/344970/ */
+.learn {
+	width: 400px;
+	height: 300px;
+	background-image: url("../images/CCD_learn.svg");
+	background-repeat: no-repeat;
+    background-size: 75%;
+    background-position: center top;
+	transition: background-image 1s;
+    
+}
+
+.learn:hover {
+	background-image: url("../images/CCD_learn_animated.svg");
+}
+
+/* Blueprint Image and Animation: Icon From The Noun Project: https://thenounproject.com/search/?q=blueprint&i=2021797 */
+.blueprint {
+	width: 400px;
+	height: 300px;
+	background-image: url("../images/CCD_blueprint.svg");
+	background-repeat: no-repeat;
+    background-size: 75%;
+    background-position:  center top;
+	transition: background-image 1s;
+    
+}
+
+.blueprint:hover {
+	background-image: url("../images/CCD_blueprint_animate.svg");
+}
+
+/* Ideate Image and Animation: Icon From The Noun Project: https://thenounproject.com/search/?q=light%20bulb&i=1754134 */
+.ideate {
+	width: 400px;
+	height: 300px;
+	background-image: url("../images/CCD_ideate.svg");
+	background-repeat: no-repeat;
+    background-size: 75%;
+    background-position:  center top;
+	transition: background-image 1s;
+    
+}
+
+.ideate:hover {
+	background-image: url("../images/CCD_ideate_animate.svg");
+}
+/* Prototype Image and Animation: Icon From The Noun Project: https://thenounproject.com/icon/995974/ */
+.proto {
+	width: 400px;
+	height: 300px;
+	background-image: url("../images/CCD_prototype.svg");
+	background-repeat: no-repeat;
+    background-size: 75%;
+    background-position:  center top;
+	transition: background-image 1s;
+    
+}
+
+.proto:hover {
+	background-image: url("../images/CCD_prototype_animate.svg");
+}
+
+/* Evaluate Image and Animation: Icon From The Noun Project: https://thenounproject.com/icon/808166/ */
+.evaluate {
+	width: 400px;
+	height: 300px;
+	background-image: url("../images/CCD_evaluate.svg");
+	background-repeat: no-repeat;
+    background-size: 65%;
+    background-position:  center top;
+	transition: background-image 1s;
+    
+}
+
+.evaluate:hover {
+	background-image: url("../images/CCD_evaluate_animate.svg");
+}
+
+/* I modified the following code from w3schools for my buttons: https://www.w3schools.com/css/tryit.asp?filename=trycss_buttons_animate1 */
+ 
+.button {
+  display: inline-block;
+  border-radius: 4px;
+  background-color: #45F0DF;
+  border: none;
+  color: lightgrey;
+  text-align: center;
+  font-size: 16px;
+  padding: 20px;
+  width: 200px;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+  color: white;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+/* I modified the following code for #wrapper: http://jsfiddle.net/loktar/cynbp3j0/ */
+#wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+.flex-containers{
+    display:flex;
+    justify-content: center;
+    
+}
+
+.flex-items{
+    padding: 10px;
+    display: inline-block;
+}
+
+/*Contact Us Form, modified from W3schools: https://www.w3schools.com/howto/howto_css_contact_form.asp*/
+/* * {box-sizing: border-box;}*/
+
+input[type=text], select, textarea {
+    font-size: 10pt;
+    font-family: 'Proxima Nova Bold', sans-serif;
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;
+}
+
+label {
+     font-size: 15pt;
+     font-family: 'Proxima Nova Bold', sans-serif;
+}
+
+.container {
+    border-radius: 15px;
+    background-color: #f2f2f2;
+    padding: 50px;
+}
+
+/* Pagination code modified from Stack Overflow: https://stackoverflow.com/questions/33277777/css-circle-with-border */
+
+.dot {
+    background-color: lightgray;
+    border: 1px solid dimgrey;
+    height:25px;
+    border-radius:50%;
+    -moz-border-radius:50%;
+    -webkit-border-radius:50%;
+    width:25px;
+    display: inline-block;
+}
+
+/* Database class */
+.database {
+    margin-left: 40px;
+    margin-right: 40px;
+    margin-bottom: 20px;
+}
+
+/*Footer code modified from W3Schools: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_fixed_footer */
+.footer {
+   position: static;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   height: 100px;
+   padding-top: 10px;
+   padding-left: 10px;
+   padding-right: 10 px;
+   padding-bottom: 10px;
+   background-color: #111D4A;
+   color: white;
+   text-align: center;
+}
+
+svg {
+  width: 100vw;
+  height: 200px;
+}
+
+path {
+  stroke: #111D4A;
+  stroke-width: 10px;
+  stroke-linecap: round;
+  fill: none;
+}
+
