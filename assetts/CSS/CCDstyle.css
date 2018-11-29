@@ -385,8 +385,8 @@ caption {
     border: 2px solid lightgrey;
     padding: 20px;
     width: calc(100% - 44px);
-            
 }
+            
 
 /* image animations modified from this code: http://dabblet.com/gist/1991345 */
 
@@ -399,6 +399,7 @@ caption {
 	background-repeat: no-repeat;
     background-size: cover;
 	transition: background-image 1s;
+    z-index: 1;
     
 }
 
@@ -409,6 +410,7 @@ move backgorund imag into id (specific stuff) and general stuff in a class, ever
 
 .pinpoint:hover {
 	background-image: url("../images/CCD_discover_animate.svg");
+    z-index: 1;
 }
 
 /* Learn Image and Animation: Icone From The Noun Project: https://thenounproject.com/icon/344970/ */
